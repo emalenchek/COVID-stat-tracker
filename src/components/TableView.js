@@ -31,8 +31,8 @@ class TableView extends Component {
                                 <tr key={Slug}>
                                     <td>{Country}</td>
                                     <td>{TotalConfirmed}</td>
-                                    <td>{TotalDeaths}</td>
-                                    <td>{TotalRecovered}</td>
+                                    <td className="text-danger">{TotalDeaths}</td>
+                                    <td className="text-success">{TotalRecovered}</td>
                                 </tr>
                             ))
                             }
