@@ -1,2 +1,5 @@
 export const GET_COUNTRIES = 'GET_COUNTRIES';
 export const COUNTRIES_LOADING = 'COUNTRIES_LOADING';
+export const GET_TOTALS = 'GET_TOTALS';
+export const TOTALS_LOADING = 'TOTALS_LOADING';
+
