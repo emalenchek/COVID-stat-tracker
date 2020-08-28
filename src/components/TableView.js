@@ -16,28 +16,30 @@ class TableView extends Component {
         return(
             <div>
                 <Container>
-                    <Table>
-                        <thead>
-                            <tr>
-                                <th>Country</th>
-                                <th>Total Cases</th>
-                                <th>Total Deaths</th>
-                                <th>Total Recovered</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                        {
-                        countries.map(({ Country, Slug, TotalConfirmed, TotalDeaths, TotalRecovered }) => (
-                                <tr key={Slug}>
-                                    <td>{Country}</td>
-                                    <td>{TotalConfirmed}</td>
-                                    <td className="text-danger">{TotalDeaths}</td>
-                                    <td className="text-success">{TotalRecovered}</td>
+                    <div className="table-responsive">
+                        <Table>
+                            <thead>
+                                <tr>
+                                    <th>Country</th>
+                                    <th>Total Cases</th>
+                                    <th>Total Deaths</th>
+                                    <th>Total Recovered</th>
                                 </tr>
-                            ))
-                            }
-                        </tbody>
-                    </Table>
+                            </thead>
+                            <tbody>
+                            {
+                            countries.map(({ Country, Slug, TotalConfirmed, TotalDeaths, TotalRecovered }) => (
+                                    <tr key={Slug}>
+                                        <td>{Country}</td>
+                                        <td>{TotalConfirmed}</td>
+                                        <td className="text-danger">{TotalDeaths}</td>
+                                        <td className="text-success">{TotalRecovered}</td>
+                                    </tr>
+                                ))
+                                }
+                            </tbody>
+                        </Table>
+                    </div>
                 </Container>
             </div>
         );
