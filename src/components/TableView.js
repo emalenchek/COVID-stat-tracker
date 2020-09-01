@@ -33,9 +33,9 @@ class TableView extends Component {
                 <Container>
                     <InputGroup className="mb-5">
                         <InputGroupAddon addonType="prepend">
-                            <InputGroupText>Search</InputGroupText>
+                            <InputGroupText>Filter</InputGroupText>
                         </InputGroupAddon>
-                        <Input onChange={this.editSearchTerm} />
+                        <Input onChange={this.editSearchTerm} placeholder="Search By Country Name..." />
                     </InputGroup>
                 </Container>
                 <Container>
