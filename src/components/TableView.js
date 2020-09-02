@@ -36,7 +36,7 @@ class TableView extends Component {
                         <BarChart data={filtered} >
                             <CartesianGrid strokeDasharray="3 4" />
                             <XAxis dataKey="Country" />
-                            <YAxis />
+                            <YAxis width={75} />
                             <Tooltip />
                             <Legend />
                             <Bar dataKey="TotalConfirmed" />
