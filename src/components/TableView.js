@@ -3,7 +3,7 @@ import { Container, Table, InputGroup, InputGroupAddon, InputGroupText, Input } 
 import { connect } from 'react-redux';
 import { getCountries } from '../actions/countryActions';
 import PropTypes from 'prop-types';
-import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { ResponsiveContainer, BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
 class TableView extends Component {
 
@@ -31,17 +31,19 @@ class TableView extends Component {
 
         return(
             <div>
-                <Container className="d-flex justify-content-center">
-                    <BarChart width={800} height={400} data={filtered} className="mb-5 mt-5">
-                        <CartesianGrid strokeDasharray="3 4" />
-                        <XAxis dataKey="Country" />
-                        <YAxis />
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="TotalConfirmed" />
-                        <Bar dataKey="TotalDeaths" fill="#dc3545" />
-                        <Bar dataKey="TotalRecovered" fill="#28a745" />
-                    </BarChart>
+                <Container className="mb-5 mt-5">
+                    <ResponsiveContainer width="100%" height={400}>
+                        <BarChart data={filtered} >
+                            <CartesianGrid strokeDasharray="3 4" />
+                            <XAxis dataKey="Country" />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend />
+                            <Bar dataKey="TotalConfirmed" />
+                            <Bar dataKey="TotalDeaths" fill="#dc3545" />
+                            <Bar dataKey="TotalRecovered" fill="#28a745" />
+                        </BarChart>
+                    </ResponsiveContainer>
                 </Container>
                 <Container>
                     <InputGroup className="mb-5">
